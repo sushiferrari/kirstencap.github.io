@@ -16,13 +16,19 @@ body {
 
 /* ======= SIDEBAR STYLING ======= */
 .sidebar {
-  width: 333px;                            /* Fixed width for sidebar */
-  background: var(--ua-red);              /* Use UA red background */
-  color: #fff;                             /* White text in sidebar */
-  padding: 20px;                           /* Space inside the sidebar */
-  display: flex;                           /* Stack sidebar items vertically */
-  flex-direction: column;
-  align-items: center;                     /* Center items horizontally */
+  position: fixed;                /* Pins it to the top */
+  top: 0;
+  left: 0;
+  width: 100%;                    /* Full width of page */
+  height: auto;                   /* No vertical height restriction */
+  background: var(--ua-red);      /* UA red */
+  color: #fff;
+  padding: 16px 24px;
+  display: flex;                  /* Makes it horizontal */
+  justify-content: center;        /* Center content horizontally */
+  gap: 24px;                      /* Space between items */
+  z-index: 9999;                  /* Keeps it on top of everything */
+  flex-wrap: wrap;                /* Allows wrapping on small screens */
 }
 
 .sidebar h2 {
@@ -33,9 +39,10 @@ body {
 /* ======= SIDEBAR NAVIGATION ======= */
 .nav {
   display: flex;                           /* Stack links vertically */
-  flex-direction: column;
+  flex-direction: row;
   gap: 15px;                               /* Spacing between each link */
   text-align: center;                      /* Center-align text */
+  flex-wrap: wrap;
 }
 
 .nav a {
@@ -51,7 +58,7 @@ body {
 
 /* ======= MAIN CONTENT STYLING ======= */
 .content {
-  flex: 1;                                 /* Take up remaining width (next to sidebar) */
+  margin-top: 100px;
   padding: 40px;                           /* Space around the content */
   background: var(--bg);                   /* Use white background */
   color: var(--text);                      /* Use dark text */
