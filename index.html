@@ -5,48 +5,136 @@
   <title>Kirsten Capangpangan – Resume</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; line-height: 1.6; }
-    h1, h2 { color: #333; }
-    header { border-bottom: 2px solid #eee; margin-bottom: 20px; }
-    .contact a { margin-right: 10px; text-decoration: none; color: #0366d6; }
-    section { margin: 30px 0; }
+    :root {
+      --ua-red: #9D2235;
+      --text: #222;
+      --muted: #666;
+      --bg: #fff;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex; /* creates sidebar + content */
+      min-height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background: var(--ua-red);
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sidebar h2 {
+      font-size: 22px;
+      margin: 0 0 20px;
+    }
+
+    .nav {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main content */
+    .content {
+      flex: 1;
+      padding: 40px;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      border-bottom: 2px solid #eee;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    h2 {
+      color: var(--ua-red);
+      margin-top: 30px;
+    }
+
+    .contact a {
+      margin-right: 10px;
+      text-decoration: none;
+      color: var(--ua-red);
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Kirsten Capangpangan</h1>
-    <p class="contact">
-      <a href="mailto:you@example.com">kec040@uark.edu</a> |
-      <a href="https://www.linkedin.com/in/your-link">www.linkedin.com/in/kirstencap</a> |
-      <a href="https://github.com/kirstencap">GitHub</a>
-    </p>
-  </header>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>Menu</h2>
+    <nav class="nav">
+      <a href="#summary">Summary</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+    </nav>
+  </aside>
 
-  <section>
-    <h2>Summary</h2>
-    <p>A short paragraph highlighting your professional strengths, interests, and the roles you’re targeting.</p>
-  </section>
+  <!-- Main content -->
+  <main class="content">
+    <header>
+      <h1>Kirsten Capangpangan</h1>
+      <p class="contact">
+        <a href="mailto:kec040@uark.edu">kec040@uark.edu</a> |
+        <a href="https://www.linkedin.com/in/kirstencap">LinkedIn</a> |
+        <a href="https://github.com/kirstencap">GitHub</a>
+      </p>
+    </header>
 
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>Python, SQL, C#</li>
-      <li>Data Analysis, Power BI</li>
-      <li>ERP (SAP), Cybersecurity basics</li>
-    </ul>
-  </section>
+    <section id="summary">
+      <h2>Summary</h2>
+      <p>A short paragraph highlighting your professional strengths, interests, and the roles you’re targeting.</p>
+    </section>
 
-  <section>
-    <h2>Experience</h2>
-    <h3>Job Title – Company <span style="float:right;">2023–Present</span></h3>
-    <ul>
-      <li>Write bullet points focused on accomplishments and results.</li>
-    </ul>
-  </section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Python, SQL, C#</li>
+        <li>Data Analysis, Power BI</li>
+        <li>ERP (SAP), Cybersecurity basics</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Education</h2>
-    <p><strong>B.S. Information Systems, Minor in Cybersecurity</strong> – University of Arkansas (Expected 2026)</p>
-  </section>
+    <section id="experience">
+      <h2>Experience</h2>
+      <h3>Job Title – Company <span style="float:right;">2023–Present</span></h3>
+      <ul>
+        <li>Write bullet points focused on accomplishments and results.</li>
+      </ul>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <p><strong>B.S. Information Systems, Minor in Cybersecurity</strong> – University of Arkansas (Expected 2026)</p>
+    </section>
+  </main>
 </body>
 </html>
