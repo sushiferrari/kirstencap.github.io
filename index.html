@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Kirsten Capangpangan – Resume</title>
+
+  <!-- Tab Name -->
+  <title>Capangpangan – Resume</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Section Heading View -->
   <style>
     :root {
       --ua-red: #9D2235;
@@ -12,6 +16,7 @@
       --bg: #fff;
     }
 
+  /* Detail Text View */
     body {
       margin: 0;
       font-family: Roboto, sans-serif;
@@ -19,9 +24,9 @@
       min-height: 100vh;
     }
 
-    /* Sidebar */
+    /* Sidebar Fit on Page */
     .sidebar {
-      width: 250px;
+      width: 333px;
       background: var(--ua-red);
       color: #fff;
       padding: 20px;
@@ -29,12 +34,14 @@
       flex-direction: column;
       align-items: center;
     }
-
+    
+    /* Sidebar Font Settings */
     .sidebar h2 {
-      font-size: 22px;
+      font-size: 33px;
       margin: 0 0 20px;
     }
 
+    /* Sidebar section heading space between lines */
     .nav {
       display: flex;
       flex-direction: column;
@@ -42,15 +49,18 @@
       text-align: center;
     }
 
+    /* Sidebar Text View */
     .nav a {
       color: #fff;
       text-decoration: none;
       font-weight: bold;
       text-transform: uppercase;
     }
-
+    
+    /* Hover over sidebar sections view settings */
     .nav a:hover {
-      text-decoration: underline;
+      text-decoration: italics;
+      text-decoration: bold;
     }
 
     /* Main content */
@@ -60,9 +70,9 @@
       background: var(--bg);
       color: var(--text);
     }
-
+  
     header {
-      border-bottom: 2px solid #eee;
+      border-bottom: 9px solid #eee;
       margin-bottom: 20px;
     }
 
@@ -87,54 +97,63 @@
   </style>
 </head>
 <body>
-  <!-- Sidebar -->
+  
+  <!-- Sidebar Text Settings -->
   <aside class="sidebar">
     <h2>Menu</h2>
     <nav class="nav">
-      <a href="#summary">Summary</a>
+      <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
       <a href="#education">Education</a>
     </nav>
   </aside>
 
-  <!-- Main content -->
+  <!-- Name + Linked website Settings -->
   <main class="content">
     <header>
       <h1>Kirsten Capangpangan</h1>
       <p class="contact">
         <a href="mailto:kec040@uark.edu">kec040@uark.edu</a> |
-        <a href="https://www.linkedin.com/in/kirstencap">LinkedIn</a> |
+        <a href="https://www.linkedin.com/in/kirstencap">LinkedIn</a> 
        <!-- <a href="https://github.com/kirstencap">GitHub</a> */ -->
       </p>
     </header>
-
-    <section id="summary">
+  <!-- About Section Input -->
+    <section id="about">
       <h2>Professional Summary</h2>
       <p>I am currently pursuing a B.S. in Information Systems at the University of Arkansas. My expected graduation date is May 2026. I am focusing my studies in 
-      hopes of working as a Buisness Analyst or a Database Administrator</p>
+      hopes of working as a Buisness Analyst or a Database Administrator.</p>
     </section>
 
+    <!-- Skills Section Input -->
     <section id="skills">
       <h2>Skills</h2>
       <ul>
-        <li>Python, SQL, C#</li>
-        <li>Data Analysis, Power BI</li>
-        <li>ERP (SAP), Cybersecurity basics</li>
+        <li>Excel, SQL, Tableau, SAP Fiori, Power BI, Cyber Security Basics</li>
+        <li>HTMT, CSS</li>
       </ul>
     </section>
 
+    <!-- Expereince section Input -->
     <section id="experience">
       <h2>Experience</h2>
-      <h3>Job Title – Company <span style="float:right;">2023–Present</span></h3>
+      <h3>Resident Assistant (RA) – University of Arkansas Housing <span style="float:right;">July 2024–May 2026</span></h3>
       <ul>
-        <li>Write bullet points focused on accomplishments and results.</li>
+        <li>Provide conlict resolution</li>
+        <li>Event plannig</li>
+        <li>Peer support for a diverse student body</li>
+        <li>Develop crisis response protocols</li>
+        <li>Inclusive community building</li>
       </ul>
     </section>
 
+    <!-- Education Section Input -->
     <section id="education">
       <h2>Education</h2>
-      <p><strong>B.S. Information Systems, Minor in Cybersecurity</strong> – University of Arkansas (Expected 2026)</p>
+      <p><strong>B.S. Information Systems</strong> – University of Arkansas</p>
+      <li>Focus: Business Analytics, Cyber Security</li>
+    <!-- Talk about possible grad school? -->
     </section>
   </main>
 </body>
