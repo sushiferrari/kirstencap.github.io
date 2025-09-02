@@ -1,0 +1,84 @@
+/* ======= COLOR VARIABLES ======= */
+:root {
+  --ua-red: #9D2235;    /* University of Arkansas red */
+  --text: #222;         /* Main text color (dark gray) */
+  --muted: #666;        /* Muted/secondary text color */
+  --bg: #fff;           /* Background color (white) */
+}
+
+/* ======= BASE STYLES ======= */
+body {
+  margin: 0;                               /* Remove default margin */
+  font-family: Roboto, sans-serif;         /* Set primary font */
+  display: flex;                           /* Create side-by-side layout (sidebar + content) */
+  min-height: 100vh;                       /* Full page height */
+}
+
+/* ======= SIDEBAR STYLING ======= */
+.sidebar {
+  width: 333px;                            /* Fixed width for sidebar */
+  background: var(--ua-red);              /* Use UA red background */
+  color: #fff;                             /* White text in sidebar */
+  padding: 20px;                           /* Space inside the sidebar */
+  display: flex;                           /* Stack sidebar items vertically */
+  flex-direction: column;
+  align-items: center;                     /* Center items horizontally */
+}
+
+.sidebar h2 {
+  font-size: 33px;                         /* Title size inside sidebar */
+  margin: 0 0 20px;                        /* No top margin, 20px bottom margin */
+}
+
+/* ======= SIDEBAR NAVIGATION ======= */
+.nav {
+  display: flex;                           /* Stack links vertically */
+  flex-direction: column;
+  gap: 15px;                               /* Spacing between each link */
+  text-align: center;                      /* Center-align text */
+}
+
+.nav a {
+  color: #fff;                             /* White links */
+  text-decoration: none;                   /* Remove underline */
+  font-weight: bold;                       /* Bold links */
+  text-transform: uppercase;               /* Make links all caps */
+}
+
+.nav a:hover {
+  text-decoration: underline;              /* Add underline on hover */
+}
+
+/* ======= MAIN CONTENT STYLING ======= */
+.content {
+  flex: 1;                                 /* Take up remaining width (next to sidebar) */
+  padding: 40px;                           /* Space around the content */
+  background: var(--bg);                   /* Use white background */
+  color: var(--text);                      /* Use dark text */
+}
+
+/* ======= HEADER STYLING ======= */
+header {
+  border-bottom: 9px solid #eee;           /* Thick light gray line under header */
+  margin-bottom: 20px;                     /* Space below header */
+}
+
+h1 {
+  margin: 0;                               /* Remove default margin from h1 */
+}
+
+h2 {
+  color: var(--ua-red);                    /* UA red for section headings */
+  margin-top: 30px;                        /* Space above section headers */
+}
+
+/* ======= CONTACT LINKS ======= */
+.contact a {
+  margin-right: 10px;                      /* Space between contact links */
+  text-decoration: none;                   /* Remove underline */
+  color: var(--ua-red);                    /* Make links red */
+}
+
+.contact a:hover {
+  text-decoration: underline;              /* Underline on hover for contact links */
+}
