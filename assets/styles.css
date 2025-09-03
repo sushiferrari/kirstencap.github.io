@@ -178,6 +178,27 @@ h2 {
   margin-right: 6px;
 }
 
+/* ======= CUSTOM BULLET STYLING FOR SKILLS ======= */
+.custom-bullets {
+  list-style: none;                 /* Remove default bullets */
+  padding: 0;
+  text-align: center;              /* Center the text and bullets */
+}
+
+.custom-bullets li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+
+.custom-bullets li::before {
+  content: "✦";                    /* Star bullet */
+  position: absolute;
+  left: 0;
+  color: var(--highlight);         /* Burnt Orange or whatever your --highlight is */
+  font-size: 18px;
+}
+
 
 /* ======= CONTACT LINKS ======= */
 .contact a {
