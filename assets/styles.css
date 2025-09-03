@@ -33,7 +33,7 @@ body {
 
 .sidebar h2 {
   font-size: 33px;                         /* Title size inside sidebar */
-  margin: 0 0 20px;                        /* No top margin, 20px bottom margin */
+  margin: 0 0 0px;                        /* No top margin, 20px bottom margin */
 }
 
 /* ======= SIDEBAR NAVIGATION ======= */
@@ -58,16 +58,33 @@ body {
 
 /* ======= MAIN CONTENT STYLING ======= */
 .content {
-  margin-top: 100px;
-  padding: 40px;                           /* Space around the content */
-  background: var(--bg);                   /* Use white background */
-  color: var(--text);                      /* Use dark text */
+  margin: 100px auto;           /* Top & bottom = 100px, left & right = auto (centered horizontally) */
+  padding: 40px;                /* Space inside the content box */
+  background: var(--bg);        /* Use white background */
+  color: var(--text);           /* Use dark text */
+/* max-width: 800px;              Optional: limits width so it's not stretched on large screens */ 
+  text-align: center;             /* Keeps text aligned center inside the centered box */
 }
+
 
 /* ======= HEADER STYLING ======= */
 header {
-  border-bottom: 9px solid #eee;           /* Thick light gray line under header */
-  margin-bottom: 20px;                     /* Space below header */
+  border-bottom: 5px solid #eee;           /* Thick light gray line under header */
+  margin-bottom: 33px;                     /* Space below header */
+}
+
+header::after {
+  content: ""; /* Creates a pseudo-element after the <header> for styling purposes. Empty content means it's a visual-only element. */
+  
+  display: block; /* Ensures the pseudo-element behaves like a block-level element (so it takes up space on its own line). */
+  
+  height: 5px; /* Sets the height of the decorative element (i.e., how thick the line appears). */
+  
+  background: linear-gradient(to right, #9D2235, #fff); 
+  /* Applies a left-to-right gradient starting with University of Arkansas red and fading to white. 
+     You can change the colors to fit your brand. */
+  
+  margin-top: 10px; /* Adds space between the bottom of the header and the gradient bar. */
 }
 
 h1 {
@@ -76,7 +93,7 @@ h1 {
 
 h2 {
   color: var(--ua-red);                    /* UA red for section headings */
-  margin-top: 30px;                        /* Space above section headers */
+  margin-top: 33px;                        /* Space above section headers */
 }
 
 /* ======= CONTACT LINKS ======= */
@@ -84,6 +101,7 @@ h2 {
   margin-right: 10px;                      /* Space between contact links */
   text-decoration: none;                   /* Remove underline */
   color: var(--ua-red);                    /* Make links red */
+  text-align: center;                      /* Makes text centered */
 }
 
 .contact a:hover {
