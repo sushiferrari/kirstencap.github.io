@@ -226,3 +226,46 @@ h2 {
   text-decoration: underline;
 }
 
+/* ======= RIGHT CONTACT PANEL ======= */
+.contact-panel {
+  position: fixed;
+  top: 100px; /* Adjust if needed */
+  right: 0;
+  width: 220px;
+  padding: 20px;
+  background-color: var(--primary);
+  color: #fff;
+  z-index: 9000;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.contact-box a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-box a:hover {
+  text-decoration: underline;
+}
+
+.contact-box p {
+  margin: 8px 0;
+}
+
+/* ======= MAIN CONTENT SPACE ADJUST ======= */
+.content {
+  margin-left: 220px; /* space for sidebar */
+  margin-right: 240px; /* space for contact panel */
+}
+@media (max-width: 768px) {
+  .contact-panel {
+    display: none;
+  }
+  .content {
+    margin-right: 0;
+  }
+}
+
