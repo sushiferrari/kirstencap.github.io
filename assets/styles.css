@@ -10,7 +10,7 @@
 /* ======= BASE STYLES ======= */
 body {
   margin: 0;                               /* Remove default margin */
-  font-family: 'Encode Sans Semi Condensed, sans-serif;         /* Set primary font */
+  font-family: 'Encode Sans Semi Condensed', sans-serif;         /* Set primary font */
   display: flex;                           /* Create side-by-side layout (sidebar + content) */
   min-height: 100vh;                       /* Full page height */
 }
@@ -22,7 +22,7 @@ body {
   left: 0;
   width: 100%;                    /* Full width of page */
   height: auto;                   /* No vertical height restriction */
-  background: var(--ua-red);      /* UA red */
+  background: var(--primary);      /* UA red */
   color: #fff;
   padding: 16px 24px;
   display: flex;                  /* Makes it horizontal */
@@ -61,7 +61,7 @@ body {
 .content {
   margin: 100px auto;           /* Top & bottom = 100px, left & right = auto (centered horizontally) */
   padding: 40px;                /* Space inside the content box */
-  background: var(--bg);        /* Use white background */
+  background: var(--background);        /* Use ivory background */
   color: var(--text);           /* Use dark text */
 /* max-width: 800px;              Optional: limits width so it's not stretched on large screens */ 
   text-align: center;             /* Keeps text aligned center inside the centered box */
@@ -70,7 +70,7 @@ body {
 
 /* ======= HEADER STYLING ======= */
 header {
-  border-bottom: 5px solid #eee;           /* Thick light gray line under header */
+  border-bottom: 5px solid #D2691E;           /* Thick light gray line under header */
   margin-bottom: 33px;                     /* Space below header */
 }
 
@@ -81,7 +81,7 @@ header::after {
   
   height: 5px; /* Sets the height of the decorative element (i.e., how thick the line appears). */
   
-  background: linear-gradient(to right, #9D2235, #fff); 
+  background: linear-gradient(to right, #D2691E, #fff); 
   /* Applies a left-to-right gradient starting with University of Arkansas red and fading to white. 
      You can change the colors to fit your brand. */
   
@@ -93,7 +93,7 @@ h1 {
 }
 
 h2 {
-  color: var(--ua-red);                    /* UA red for section headings */
+  color: var(--primary);                    /* UA red for section headings */
   margin-top: 33px;                        /* Space above section headers */
 }
 
@@ -101,7 +101,7 @@ h2 {
 .contact a {
   margin-right: 10px;                      /* Space between contact links */
   text-decoration: none;                   /* Remove underline */
-  color: var(--ua-red);                    /* Make links red */
+  color: var(--highlight);                    /* Make links red */
   text-align: center;                      /* Makes text centered */
 }
 
