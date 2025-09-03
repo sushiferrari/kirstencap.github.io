@@ -1,15 +1,16 @@
 /* ======= COLOR VARIABLES ======= */
 :root {
-  --ua-red: #9D2235;    /* University of Arkansas red */
-  --text: #222;         /* Main text color (dark gray) */
-  --muted: #666;        /* Muted/secondary text color */
-  --bg: #fff;           /* Background color (white) */
+  --primary: #4B2E2B;      /* Dark Brown */
+  --accent: #D9CBBF;       /* Sand/Taupe */
+  --background: #FDFBF9;   /* Ivory */
+  --text: #333333;         /* Charcoal Gray */
+  --highlight: #D2691E;    /* Burnt Orange */
 }
 
 /* ======= BASE STYLES ======= */
 body {
   margin: 0;                               /* Remove default margin */
-  font-family: Roboto, sans-serif;         /* Set primary font */
+  font-family: 'Encode Sans Semi Condensed, sans-serif;         /* Set primary font */
   display: flex;                           /* Create side-by-side layout (sidebar + content) */
   min-height: 100vh;                       /* Full page height */
 }
