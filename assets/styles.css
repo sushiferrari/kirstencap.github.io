@@ -9,102 +9,105 @@
 
 /* ======= BASE STYLES ======= */
 body {
-  margin: 0;                               /* Remove default margin */
-  font-family: 'Encode Sans Semi Condensed', sans-serif;         /* Set primary font */
-  display: flex;                           /* Create side-by-side layout (sidebar + content) */
-  min-height: 100vh;                       /* Full page height */
+  margin: 0;                                 /* Remove default margin */
+  font-family: 'Encode Sans Semi Condensed', sans-serif;  /* Set primary font */
+  display: flex;                             /* Side-by-side layout */
+  min-height: 100vh;                         /* Full page height */
 }
 
 /* ======= SIDEBAR STYLING ======= */
 .sidebar {
-  position: fixed;                /* Pins it to the top */
+  position: fixed;                           /* Pins to the top */
   top: 0;
   left: 0;
-  width: 100%;                    /* Full width of page */
-  height: auto;                   /* No vertical height restriction */
-  background: var(--primary);      /* UA red */
+  width: 100%;                               /* Full width */
+  background: var(--primary);                /* Dark brown background */
   color: #fff;
-  padding: 16px 24px;
-  display: flex;                  /* Makes it horizontal */
-  justify-content: center;        /* Center content horizontally */
-  gap: 24px;                      /* Space between items */
-  z-index: 9999;                  /* Keeps it on top of everything */
-  flex-wrap: wrap;                /* Allows wrapping on small screens */
+  padding: 20px 40px;                        /* More breathing room */
+  display: flex;
+  justify-content: center;                   /* Center content */
+  align-items: center;
+  gap: 40px;                                 /* More spacing between links */
+  z-index: 9999;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);   /* Subtle bottom shadow */
 }
 
 .sidebar h2 {
-  font-size: 33px;                         /* Title size inside sidebar */
-  margin: 0 0 0px;                        /* No top margin, 20px bottom margin */
+  display: none;                             /* Hide if not needed */
 }
 
-/* ======= SIDEBAR NAVIGATION ======= */
+/* ======= NAVIGATION STYLING ======= */
 .nav {
-  display: flex;                           /* Stack links vertically */
+  display: flex;
   flex-direction: row;
-  gap: 15px;                               /* Spacing between each link */
-  text-align: center;                      /* Center-align text */
+  gap: 30px;
   flex-wrap: wrap;
 }
 
 .nav a {
-  color: #fff;                             /* White links */
-  text-decoration: none;                   /* Remove underline */
-  font-weight: bold;                       /* Bold links */
-  text-transform: uppercase;               /* Make links all caps */
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  text-transform: uppercase;
 }
 
 .nav a:hover {
-  text-decoration: underline;              /* Add underline on hover */
+  background-color: var(--accent);           /* Sand/Taupe background */
+  color: var(--primary);                     /* Dark Brown text */
+  text-decoration: none;                     /* No underline on hover */
+}
+
+.nav a.active {
+  border-bottom: 3px solid var(--highlight); /* Burnt orange underline for active link */
 }
 
 /* ======= MAIN CONTENT STYLING ======= */
 .content {
-  margin: 100px auto;           /* Top & bottom = 100px, left & right = auto (centered horizontally) */
-  padding: 40px;                /* Space inside the content box */
-  background: var(--background);        /* Use ivory background */
-  color: var(--text);           /* Use dark text */
-/* max-width: 800px;              Optional: limits width so it's not stretched on large screens */ 
-  text-align: center;             /* Keeps text aligned center inside the centered box */
+  margin: 100px auto;                        /* Creates space below navbar */
+  padding: 40px;
+  background: var(--background);             /* Ivory background */
+  color: var(--text);                        /* Dark text */
+  text-align: center;
+  /* max-width: 800px; Optional: keep content narrow on wide screens */
 }
-
 
 /* ======= HEADER STYLING ======= */
 header {
-  border-bottom: 5px solid #D2691E;           /* Thick light gray line under header */
-  margin-bottom: 33px;                     /* Space below header */
+  border-bottom: 5px solid var(--highlight);  /* Burnt orange underline */
+  margin-bottom: 33px;
 }
 
 header::after {
-  content: ""; /* Creates a pseudo-element after the <header> for styling purposes. Empty content means it's a visual-only element. */
-  
-  display: block; /* Ensures the pseudo-element behaves like a block-level element (so it takes up space on its own line). */
-  
-  height: 5px; /* Sets the height of the decorative element (i.e., how thick the line appears). */
-  
-  background: linear-gradient(to right, #D2691E, #fff); 
-  /* Applies a left-to-right gradient starting with University of Arkansas red and fading to white. 
-     You can change the colors to fit your brand. */
-  
-  margin-top: 10px; /* Adds space between the bottom of the header and the gradient bar. */
+  content: "";
+  display: block;
+  height: 5px;
+  background: linear-gradient(to right, var(--highlight), #fff); /* Gradient effect */
+  margin-top: 10px;
 }
 
 h1 {
-  margin: 0;                               /* Remove default margin from h1 */
+  margin: 0;
 }
 
 h2 {
-  color: var(--primary);                    /* UA red for section headings */
-  margin-top: 33px;                        /* Space above section headers */
+  color: var(--primary);                      /* Dark brown section headers */
+  margin-top: 33px;
 }
 
 /* ======= CONTACT LINKS ======= */
 .contact a {
-  margin-right: 10px;                      /* Space between contact links */
-  text-decoration: none;                   /* Remove underline */
-  color: var(--highlight);                    /* Make links red */
-  text-align: center;                      /* Makes text centered */
+  margin-right: 10px;
+  text-decoration: none;
+  color: var(--highlight);                    /* Burnt orange */
+  text-align: center;
 }
 
 .contact a:hover {
-  text-decoration: underline;              /* Underline on hover for contact links */
+  text-decoration: underline;
 }
