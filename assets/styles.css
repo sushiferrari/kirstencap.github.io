@@ -211,3 +211,18 @@ h2 {
 .contact a:hover {
   text-decoration: underline;
 }
+.contact p {
+  margin: 0.5em 0;
+  font-size: 16px;
+}
+
+.contact a {
+  text-decoration: none;
+  color: var(--highlight);
+  margin: 0 5px;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
