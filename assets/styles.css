@@ -100,6 +100,52 @@ h2 {
   margin-top: 33px;
 }
 
+/* ======= EXPERIENCE SECTION ======= */
+.experience-entry {
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.experience-entry h3 {
+  margin-bottom: 5px;
+}
+
+.experience-dates {
+  font-size: 18px; /* Smaller date text */
+  color: var(--primary);
+  font-weight: bold;
+  margin: 5px 0 15px 0;
+}
+
+.experience-divider {
+  border-top: 2px dotted var(--accent);
+  width: 80%;
+  margin: 0 auto 15px auto;
+}
+
+.experience-bullets {
+  display: inline-block;         /* Keeps bullets aligned left while section is centered */
+  text-align: left;
+  margin: 0 auto;
+  padding-left: 1.2em;
+}
+
+.experience-bullets li {
+  list-style: none;              /* Remove default bullet */
+  position: relative;
+  padding-left: 1.4em;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.experience-bullets li::before {
+  content: "★";                  /* Star symbol instead of bullet */
+  position: absolute;
+  left: 0;
+  color: var(--highlight);       /* Burnt Orange star */
+  font-size: 14px;
+}
+
 /* ======= CONTACT LINKS ======= */
 .contact a {
   margin-right: 10px;
