@@ -145,6 +145,39 @@ h2 {
   color: var(--highlight);       /* Burnt Orange star */
   font-size: 14px;
 }
+.experience-entry {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.experience-dates {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--primary);
+  margin-top: 4px;
+}
+
+.experience-divider {
+  border-top: 1.5px dotted var(--accent);
+  margin: 10px auto 20px;
+  width: 60%;
+}
+
+.experience-bullets {
+  list-style-type: none;
+  padding-left: 0;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.experience-bullets li::before {
+  content: "★ ";
+  color: var(--highlight);
+  font-size: 1rem;
+  margin-right: 6px;
+}
+
 
 /* ======= CONTACT LINKS ======= */
 .contact a {
