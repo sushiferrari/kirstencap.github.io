@@ -5,52 +5,103 @@
   <title>Skills – Kirsten Capangpangan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="assets/styles.css">
-   <!-- Google Font: Encode Sans Semi Condensed -->
+  <!-- Google Font: Encode Sans Semi Condensed -->
   <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed&display=swap" rel="stylesheet">
   <!-- Font Awesome for icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+  <style>
+    /* Prevent contact panel from overlapping top nav */
+    body {
+      padding-top: 80px; /* space for top nav */
+    }
+
+    /* Skills Table */
+    .skills-table {
+      width: 90%;
+      max-width: 900px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      font-size: 1.1rem;
+    }
+
+    .skills-table td {
+      border: 1.5px solid var(--accent);
+      padding: 20px;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .skills-table i {
+      display: block;
+      font-size: 24px;
+      color: var(--highlight);
+      margin-bottom: 8px;
+    }
+
+    .skills-table td:hover {
+      background-color: var(--accent);
+      color: var(--primary);
+    }
+
+    /* Make room for contact panel on right */
+    .content {
+      margin-right: 270px;
+    }
+
+    /* Contact Panel Below Sidebar */
+    .contact-panel {
+      top: 80px; /* Push below top nav */
+    }
+  </style>
 </head>
+
 <body>
   <!-- Navigation bar (fixed at the top) -->
   <aside class="sidebar">
     <h2>Menu</h2>
-   <nav class="nav">
-  <a href="index.html">About</a>
-  <a href="skills.html"class="active">Skills</a>
-  <a href="projects.html">Projects</a>
-  <a href="education.html">Education</a>
-  <a href="experience.html">Experience</a>
-</nav>
-<aside class="contact-panel">
-  <ul>
-    <li><i class="fas fa-envelope"></i> <a href="mailto:kec040@uark.edu">kec040@uark.edu</a></li>
-    <li><i class="fas fa-phone"></i> (253) 861-6518</li>
-    <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/kirstencap" target="_blank">LinkedIn</a></li>
-    <li><i class="fas fa-map-marker-alt"></i> Dallas, TX ★ Fayetteville, AR</li>
-  </ul>
-</aside>
+    <nav class="nav">
+      <a href="index.html">About</a>
+      <a href="skills.html" class="active">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="education.html">Education</a>
+      <a href="experience.html">Experience</a>
+    </nav>
+  </aside>
 
+  <!-- Contact Panel -->
+  <aside class="contact-panel">
+    <ul>
+      <li><i class="fas fa-envelope"></i> <a href="mailto:kec040@uark.edu">kec040@uark.edu</a></li>
+      <li><i class="fas fa-phone"></i> (253) 861-6518</li>
+      <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/kirstencap" target="_blank">LinkedIn</a></li>
+      <li><i class="fas fa-map-marker-alt"></i> Dallas, TX ★ Fayetteville, AR</li>
+    </ul>
   </aside>
 
   <!-- Main content area -->
-<main class="content">
-  <header>
-    <h1>Skills</h1>
-  </header>
+  <main class="content">
+    <header>
+      <h1>Skills</h1>
+    </header>
 
-  <section class="skills-grid">
-    <div class="skill-item"><i class="fas fa-database"></i> SQL</div>
-    <div class="skill-item"><i class="fas fa-chart-bar"></i> Power BI</div>
-    <div class="skill-item"><i class="fas fa-file-excel"></i> Excel</div>
-    <div class="skill-item"><i class="fas fa-chart-pie"></i> Tableau</div>
-    <div class="skill-item"><i class="fab fa-html5"></i> HTML</div>
-    <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS</div>
-    <div class="skill-item"><i class="fas fa-network-wired"></i> SAP Fiori</div>
-    <div class="skill-item"><i class="fas fa-cogs"></i> Business Process Modeling</div>
-    <div class="skill-item"><i class="fas fa-shield-alt"></i> Cybersecurity Basics</div>
-  </section>
-</main>
-
+    <table class="skills-table">
+      <tr>
+        <td><i class="fas fa-database"></i>SQL</td>
+        <td><i class="fas fa-chart-bar"></i>Power BI</td>
+        <td><i class="fas fa-file-excel"></i>Excel</td>
+      </tr>
+      <tr>
+        <td><i class="fas fa-chart-pie"></i>Tableau</td>
+        <td><i class="fab fa-html5"></i>HTML</td>
+        <td><i class="fab fa-css3-alt"></i>CSS</td>
+      </tr>
+      <tr>
+        <td><i class="fas fa-network-wired"></i>SAP Fiori</td>
+        <td><i class="fas fa-cogs"></i>Business Process Modeling</td>
+        <td><i class="fas fa-shield-alt"></i>Cybersecurity Basics</td>
+      </tr>
+    </table>
+  </main>
 </body>
 </html>
