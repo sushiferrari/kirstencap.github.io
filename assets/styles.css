@@ -11,38 +11,38 @@
 body {
   margin: 0;                                 /* Remove default margin */
   font-family: 'Encode Sans Semi Condensed', sans-serif;  /* Set primary font */
-  display: flex;                             /* Side-by-side layout */
-  min-height: 100vh;                         /* Full page height */
+  display: flex;                             /* Enables horizontal layout for sidebar and content */
+  min-height: 100vh;                         /* Full viewport height */
 }
 
 /* ======= SIDEBAR STYLING ======= */
 .sidebar {
-  position: fixed;                           /* Pins to the top */
+  position: fixed;                           /* Sticks the sidebar to the top */
   top: 0;
   left: 0;
-  width: 100%;                               /* Full width */
+  width: 100%;                               /* Full width (horizontal nav bar) */
   background: var(--primary);                /* Dark brown background */
   color: #fff;
-  padding: 20px 40px;                        /* More breathing room */
+  padding: 20px 40px;                        /* Padding around the sidebar */
   display: flex;
-  justify-content: center;                   /* Center content */
+  justify-content: center;                   /* Center navigation items */
   align-items: center;
-  gap: 40px;                                 /* More spacing between links */
-  z-index: 9999;
-  flex-wrap: wrap;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);   /* Subtle bottom shadow */
+  gap: 40px;                                 /* Space between nav links */
+  z-index: 9999;                             /* Ensures it's above other elements */
+  flex-wrap: wrap;                           /* Allows nav links to wrap on smaller screens */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);   /* Adds subtle shadow */
 }
 
 .sidebar h2 {
-  display: none;                             /* Hide if not needed */
+  display: none;                             /* Hides the sidebar heading */
 }
 
 /* ======= NAVIGATION STYLING ======= */
 .nav {
   display: flex;
   flex-direction: row;
-  gap: 30px;
-  flex-wrap: wrap;
+  gap: 30px;                                 /* Spacing between links */
+  flex-wrap: wrap;                           /* Makes navigation responsive */
 }
 
 .nav a {
@@ -51,39 +51,36 @@ body {
   font-weight: 600;
   font-size: 18px;
   letter-spacing: 0.5px;
-  padding: 6px 12px;
+  padding: 6px 12px;                         /* Padding for hover area */
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
-  text-transform: uppercase;
+  text-transform: uppercase;                /* Uppercase nav links */
 }
 
 .nav a:hover {
-  background-color: var(--accent);           /* Sand/Taupe background */
-  color: var(--primary);                     /* Dark Brown text */
-  text-decoration: none;                     /* No underline on hover */
+  background-color: var(--accent);           /* Light background on hover */
+  color: var(--primary);                     /* Dark text on hover */
+  text-decoration: none;
 }
 
 .nav a.active {
-  border-bottom: 3px solid var(--highlight); /* Burnt orange underline for active link */
+  border-bottom: 3px solid var(--highlight); /* Underline to show active page */
 }
 
 /* ======= MAIN CONTENT STYLING ======= */
 .content {
-  margin: 100px auto;                        /* Creates space below navbar */
+  margin: 100px auto;                        /* Top space from nav */
   padding: 40px;
-  background: var(--background);             /* Ivory background */
-  color: var(--text);                        /* Dark text */
+  background: var(--background);             /* Light background */
+  color: var(--text);                        /* Dark text color */
   text-align: center;
-  /* max-width: 800px; Optional: keep content narrow on wide screens */
-  .content {
-  margin-right: 270px; /* Gives space for right panel */
-}
-
+  margin-right: 270px;                       /* Space for right contact panel */
+  max-width: 800px;                          /* Keeps content narrow */
 }
 
 /* ======= HEADER STYLING ======= */
 header {
-  border-bottom: 5px solid var(--highlight);  /* Burnt orange underline */
+  border-bottom: 5px solid var(--highlight);  /* Orange underline */
   margin-bottom: 33px;
 }
 
@@ -91,7 +88,7 @@ header::after {
   content: "";
   display: block;
   height: 5px;
-  background: linear-gradient(to right, var(--highlight), #fff); /* Gradient effect */
+  background: linear-gradient(to right, var(--highlight), #fff); /* Gradient underline */
   margin-top: 10px;
 }
 
@@ -106,36 +103,36 @@ h2 {
 
 /* ======= EXPERIENCE SECTION ======= */
 .experience-entry {
-  margin-bottom: 60px;
+  margin-bottom: 60px;                        /* Space between entries */
   text-align: center;
 }
 
 .experience-entry h3 {
-  margin-bottom: 5px;
+  margin-bottom: 5px;                         /* Tight heading spacing */
 }
 
 .experience-dates {
-  font-size: 18px; /* Smaller date text */
+  font-size: 18px;                            /* Smaller date text */
   color: var(--primary);
   font-weight: bold;
   margin: 5px 0 15px 0;
 }
 
 .experience-divider {
-  border-top: 2px dotted var(--accent);
+  border-top: 2px dotted var(--accent);       /* Decorative line */
   width: 80%;
   margin: 0 auto 15px auto;
 }
 
 .experience-bullets {
-  display: inline-block;         /* Keeps bullets aligned left while section is centered */
+  display: inline-block;                      /* Keeps bullets left-aligned */
   text-align: left;
   margin: 0 auto;
   padding-left: 1.2em;
 }
 
 .experience-bullets li {
-  list-style: none;              /* Remove default bullet */
+  list-style: none;                           /* Removes default bullet */
   position: relative;
   padding-left: 1.4em;
   margin-bottom: 8px;
@@ -143,50 +140,18 @@ h2 {
 }
 
 .experience-bullets li::before {
-  content: "★";                  /* Star symbol instead of bullet */
+  content: "★";                              /* Adds a star icon */
   position: absolute;
   left: 0;
-  color: var(--highlight);       /* Burnt Orange star */
-  font-size: 14px;
-}
-.experience-entry {
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-.experience-dates {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: var(--primary);
-  margin-top: 4px;
-}
-
-.experience-divider {
-  border-top: 1.5px dotted var(--accent);
-  margin: 10px auto 20px;
-  width: 60%;
-}
-
-.experience-bullets {
-  list-style-type: none;
-  padding-left: 0;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.experience-bullets li::before {
-  content: "★ ";
   color: var(--highlight);
-  font-size: 1rem;
-  margin-right: 6px;
+  font-size: 14px;
 }
 
 /* ======= CUSTOM BULLET STYLING FOR SKILLS ======= */
 .custom-bullets {
-  list-style: none;                 /* Remove default bullets */
+  list-style: none;
   padding: 0;
-  text-align: center;              /* Center the text and bullets */
+  text-align: center;                        /* Center the skills */
 }
 
 .custom-bullets li {
@@ -196,54 +161,27 @@ h2 {
 }
 
 .custom-bullets li::before {
-  content: "✦";                    /* Star bullet */
+  content: "✦";                              /* Decorative bullet */
   position: absolute;
   left: 0;
-  color: var(--highlight);         /* Burnt Orange or whatever your --highlight is */
+  color: var(--highlight);
   font-size: 18px;
 }
 
-
-/* ======= CONTACT LINKS ======= */
-.contact a {
-  margin-right: 10px;
-  text-decoration: none;
-  color: var(--highlight);                    /* Burnt orange */
-  text-align: center;
-}
-
-.contact a:hover {
-  text-decoration: underline;
-}
-.contact p {
-  margin: 0.5em 0;
-  font-size: 16px;
-}
-
-.contact a {
-  text-decoration: none;
-  color: var(--highlight);
-  margin: 0 5px;
-}
-
-.contact a:hover {
-  text-decoration: underline;
-}
-
-/* ======= STICKY CONTACT PANEL ======= */
+/* ======= CONTACT PANEL STYLING ======= */
 .contact-panel {
   position: fixed;
   top: 0;
   right: 0;
-  width: 250px;
-  height: 100vh;
+  width: 250px;                               /* Fixed width for panel */
+  height: 100vh;                              /* Full height */
   background-color: var(--primary);
   color: #fff;
-  padding: 40px 20px;
-  box-shadow: -2px 0 6px rgba(0,0,0,0.2);
+  padding: 40px 20px;                         /* Padding around panel */
+  box-shadow: -2px 0 6px rgba(0,0,0,0.2);     /* Shadow on left edge */
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: column;                     /* Stack items vertically */
+  justify-content: space-between;            /* Pushes location to bottom */
   z-index: 1000;
 }
 
@@ -262,16 +200,36 @@ h2 {
 
 .contact-panel i {
   margin-right: 10px;
-  color: var(--accent);
+  color: var(--accent);                       /* Icon color */
 }
 
 .contact-panel a {
-  color: var(--accent);
+  color: var(--accent);                       /* Link color */
   text-decoration: none;
 }
 
 .contact-panel a:hover {
-  text-decoration: underline;
+  text-decoration: underline;                /* Hover effect */
 }
 
+/* ======= RESPONSIVE FIX FOR SMALL SCREENS ======= */
+@media (max-width: 768px) {
+  .content {
+    margin-right: 0;                          /* Remove extra spacing */
+    padding: 20px;
+  }
 
+  .contact-panel {
+    position: relative;                      /* Makes contact panel inline */
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar {
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+  }
+}
