@@ -1,43 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <title>About – Kirsten Capangpangan</title>
+  <title>Projects – Kirsten Capangpangan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- CSS link -->
   <link rel="stylesheet" href="assets/styles.css">
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-
-<body>
-  <style>
-     /* Prevent contact panel from overlapping top nav */
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- CORRECT TOP / CONTACT PANEL PLACEMENT -->
+    <style>
     body {
       padding-top: 80px; /* space for top nav */
     }
-
-    /* Make room for contact panel on right */
     .content {
       margin-right: 270px;
     }
-
-    /* Contact Panel Below Sidebar */
     .contact-panel {
       top: 80px; /* Push below top nav */
     }
   </style>
-  <!-- Top Navigation Bar -->
-  <aside class="sidebar">
+</head>
+
+
+<body>
+<aside class="sidebar">
+    <h2>Menu</h2>
     <nav class="nav">
-      <a href="index.html" class="active">About</a>
-      <a href="skills.html">Skills</a>
+<!-- MAKE SURE TO LABEL WHICH IS  class="active" -->
+      <a href="index.html">About</a>
+      <a href="skills.html" >Skills</a>
       <a href="projects.html">Projects</a>
-      <a href="education.html">Education</a>
+      <a href="education.html" >Education</a>
       <a href="experience.html">Experience</a>
     </nav>
   </aside>
 
-  <!-- Sticky Right Contact Panel -->
+  <!-- Right Contact Panel -->
   <aside class="contact-panel">
     <div class="contact-block">
       <i class="fas fa-envelope"></i>
@@ -45,15 +47,15 @@
     </div>
     <div class="contact-block">
       <i class="fas fa-phone"></i>
-      <a href="tel:+12538616518">(253) 861‑6518</a>
+      <a href="tel:+12538616518">(253) 861-6518</a>
     </div>
     <div class="contact-block">
       <i class="fab fa-linkedin"></i>
       <a href="https://www.linkedin.com/in/kirstencap" target="_blank">LinkedIn</a>
     </div>
-    <div class="contact-block location">
+    <div class="contact-block">
       <i class="fas fa-map-marker-alt"></i>
-      Dallas, TX ★ Fayetteville, AR
+      <a>Dallas, TX ★ Fayetteville, AR</a>
     </div>
   </aside>
 
@@ -61,10 +63,15 @@
   <main class="content">
     <header>
       <h1>Kirsten Capangpangan</h1>
-      <p class="intro">
-        I am currently pursuing a B.S. in Information Systems at the University of Arkansas. Passionate about business technology, cybersecurity, and analytics.
-      </p>
     </header>
+    <div class = "experience-entry">
+      <h3>Professional Summary</h3>
+      <div class = "expereince-dates">
+        <i class="fas fa-map-marker-alt"></i>
+        <a>Dallas, TX ★ Fayetteville, AR</a>
+      I’m currently pursuing a B.S. in Information Systems at the University of Arkansas, with a strong focus on business technology, cybersecurity, and data analytics. I’m passionate about leveraging technology to solve real-world problems, improve organizational efficiency, and drive strategic decision-making.
+    </header>
+      </div>
   </main>
 </body>
 </html>
