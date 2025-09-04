@@ -75,6 +75,10 @@ body {
   color: var(--text);                        /* Dark text */
   text-align: center;
   /* max-width: 800px; Optional: keep content narrow on wide screens */
+  .content {
+  margin-right: 270px; /* Gives space for right panel */
+}
+
 }
 
 /* ======= HEADER STYLING ======= */
@@ -226,47 +230,47 @@ h2 {
   text-decoration: underline;
 }
 
-/* ======= CONTACT SIDE PANEL ======= */
+/* ======= STICKY CONTACT PANEL ======= */
 .contact-panel {
   position: fixed;
-  top: 100px;                  /* Adjust based on your nav height */
+  top: 0;
   right: 0;
-  width: 220px;
+  width: 250px;
+  height: 100vh;
   background-color: var(--primary);
   color: #fff;
-  padding: 20px 16px;
-  z-index: 9000;
-  border-radius: 8px 0 0 8px;
-  font-size: 15px;
-  text-align: left;
-  box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.15);
+  padding: 40px 20px;
+  box-shadow: -2px 0 6px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1000;
 }
 
-.contact-panel .contact-info p {
-  margin: 10px 0;
-  line-height: 1.5;
+.contact-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.contact-panel li {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.contact-panel i {
+  margin-right: 10px;
+  color: var(--accent);
 }
 
 .contact-panel a {
   color: var(--accent);
   text-decoration: none;
-  font-weight: 600;
-  display: inline-block;
 }
 
 .contact-panel a:hover {
   text-decoration: underline;
-}
-
-.contact-panel .location {
-  font-size: 14px;
-  color: var(--accent);
-}
-
-/* Optional: Hide on mobile */
-@media (max-width: 768px) {
-  .contact-panel {
-    display: none;
-  }
 }
 
