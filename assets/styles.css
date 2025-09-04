@@ -226,46 +226,47 @@ h2 {
   text-decoration: underline;
 }
 
-/* ======= RIGHT CONTACT PANEL ======= */
+/* ======= CONTACT SIDE PANEL ======= */
 .contact-panel {
   position: fixed;
-  top: 100px; /* Adjust if needed */
+  top: 100px;                  /* Adjust based on your nav height */
   right: 0;
   width: 220px;
-  padding: 20px;
   background-color: var(--primary);
   color: #fff;
+  padding: 20px 16px;
   z-index: 9000;
+  border-radius: 8px 0 0 8px;
+  font-size: 15px;
   text-align: left;
-  font-size: 14px;
-  line-height: 1.6;
+  box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.15);
 }
 
-.contact-box a {
+.contact-panel .contact-info p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.contact-panel a {
   color: var(--accent);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  display: inline-block;
 }
 
-.contact-box a:hover {
+.contact-panel a:hover {
   text-decoration: underline;
 }
 
-.contact-box p {
-  margin: 8px 0;
+.contact-panel .location {
+  font-size: 14px;
+  color: var(--accent);
 }
 
-/* ======= MAIN CONTENT SPACE ADJUST ======= */
-.content {
-  margin-left: 220px; /* space for sidebar */
-  margin-right: 240px; /* space for contact panel */
-}
+/* Optional: Hide on mobile */
 @media (max-width: 768px) {
   .contact-panel {
     display: none;
-  }
-  .content {
-    margin-right: 0;
   }
 }
 
