@@ -1,3 +1,8 @@
+/* ===============================
+   Kirsten Capangpangan - Resume Website CSS
+   Last updated: Cleaned and labeled
+   =============================== */
+
 /* ======= COLOR VARIABLES ======= */
 :root {
   --primary: #4B2E2B;      /* Dark Brown */
@@ -7,42 +12,42 @@
   --highlight: #D2691E;    /* Burnt Orange */
 }
 
-/* ======= BASE STYLES ======= */
+/* ======= BASE RESET AND LAYOUT ======= */
 body {
-  margin: 0;                                 /* Remove default margin */
-  font-family: 'Encode Sans Semi Condensed', sans-serif;  /* Set primary font */
-  display: flex;                             /* Enables horizontal layout for sidebar and content */
-  min-height: 100vh;                         /* Full viewport height */
+  margin: 0;
+  font-family: 'Encode Sans Semi Condensed', sans-serif;
+  display: flex;
+  min-height: 100vh;
+  background: var(--background);
 }
 
-/* ======= SIDEBAR STYLING ======= */
+/* ======= TOP NAV BAR ======= */
 .sidebar {
-  position: fixed;                           /* Sticks the sidebar to the top */
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;                               /* Full width (horizontal nav bar) */
-  background: var(--primary);                /* Dark brown background */
+  width: 100%;
+  background: var(--primary);
   color: #fff;
-  padding: 20px 40px;                        /* Padding around the sidebar */
+  padding: 20px 40px;
   display: flex;
-  justify-content: center;                   /* Center navigation items */
+  justify-content: center;
   align-items: center;
-  gap: 40px;                                 /* Space between nav links */
-  z-index: 9999;                             /* Ensures it's above other elements */
-  flex-wrap: wrap;                           /* Allows nav links to wrap on smaller screens */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);   /* Adds subtle shadow */
+  gap: 40px;
+  z-index: 9999;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .sidebar h2 {
-  display: none;                             /* Hides the sidebar heading */
+  display: none;
 }
 
-/* ======= NAVIGATION STYLING ======= */
 .nav {
   display: flex;
   flex-direction: row;
-  gap: 30px;                                 /* Spacing between links */
-  flex-wrap: wrap;                           /* Makes navigation responsive */
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .nav a {
@@ -51,36 +56,34 @@ body {
   font-weight: 600;
   font-size: 18px;
   letter-spacing: 0.5px;
-  padding: 6px 12px;                         /* Padding for hover area */
+  padding: 6px 12px;
   border-radius: 5px;
+  text-transform: uppercase;
   transition: background-color 0.3s, color 0.3s;
-  text-transform: uppercase;                /* Uppercase nav links */
 }
 
 .nav a:hover {
-  background-color: var(--accent);           /* Light background on hover */
-  color: var(--primary);                     /* Dark text on hover */
-  text-decoration: none;
+  background-color: var(--accent);
+  color: var(--primary);
 }
 
 .nav a.active {
-  border-bottom: 3px solid var(--highlight); /* Underline to show active page */
+  border-bottom: 3px solid var(--highlight);
 }
 
-/* ======= MAIN CONTENT STYLING ======= */
+/* ======= MAIN CONTENT ======= */
 .content {
-  margin: 100px auto;                        /* Top space from nav */
+  margin: 100px auto;
   padding: 40px;
-  background: var(--background);             /* Light background */
-  color: var(--text);                        /* Dark text color */
+  margin-right: 270px; /* Leave space for contact panel */
   text-align: center;
-  margin-right: 270px;                       /* Space for right contact panel */
-  max-width: 800px;                          /* Keeps content narrow */
+  color: var(--text);
+  max-width: 1000px;
 }
 
-/* ======= HEADER STYLING ======= */
+/* ======= SECTION HEADERS ======= */
 header {
-  border-bottom: 5px solid var(--highlight);  /* Orange underline */
+  border-bottom: 5px solid var(--highlight);
   margin-bottom: 33px;
 }
 
@@ -88,7 +91,7 @@ header::after {
   content: "";
   display: block;
   height: 5px;
-  background: linear-gradient(to right, var(--highlight), #fff); /* Gradient underline */
+  background: linear-gradient(to right, var(--highlight), #fff);
   margin-top: 10px;
 }
 
@@ -97,42 +100,109 @@ h1 {
 }
 
 h2 {
-  color: var(--primary);                      /* Dark brown section headers */
+  color: var(--primary);
   margin-top: 33px;
 }
 
-/* ======= EXPERIENCE SECTION ======= */
-.experience-entry {
-  margin-bottom: 60px;                        /* Space between entries */
+/* ======= RIGHT CONTACT PANEL ======= */
+.contact-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: var(--primary);
+  color: #fff;
+  padding: 40px 20px;
+  box-shadow: -2px 0 6px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 500;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 100px;
   text-align: center;
 }
 
-.experience-entry h3 {
-  margin-bottom: 5px;                         /* Tight heading spacing */
+.contact-info i {
+  margin-right: 8px;
+  color: var(--accent);
+}
+
+.contact-info a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.location {
+  margin-top: auto;
+  padding-top: 20px;
+  font-size: 14px;
+  color: var(--accent);
+}
+
+/* ======= SKILLS TABLE ======= */
+.skills-table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skills-table td {
+  border: 1px solid var(--accent);
+  padding: 20px;
+  font-size: 18px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.skills-table i {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--highlight);
+}
+
+/* ======= EXPERIENCE / EDUCATION ======= */
+.experience-entry {
+  margin-bottom: 60px;
+  text-align: center;
 }
 
 .experience-dates {
-  font-size: 18px;                            /* Smaller date text */
+  font-size: 18px;
   color: var(--primary);
   font-weight: bold;
   margin: 5px 0 15px 0;
 }
 
 .experience-divider {
-  border-top: 2px dotted var(--accent);       /* Decorative line */
+  border-top: 2px dotted var(--accent);
   width: 80%;
   margin: 0 auto 15px auto;
 }
 
 .experience-bullets {
-  display: inline-block;                      /* Keeps bullets left-aligned */
+  display: inline-block;
   text-align: left;
   margin: 0 auto;
   padding-left: 1.2em;
 }
 
 .experience-bullets li {
-  list-style: none;                           /* Removes default bullet */
+  list-style: none;
   position: relative;
   padding-left: 1.4em;
   margin-bottom: 8px;
@@ -140,130 +210,9 @@ h2 {
 }
 
 .experience-bullets li::before {
-  content: "★";                              /* Adds a star icon */
+  content: "★";
   position: absolute;
   left: 0;
   color: var(--highlight);
   font-size: 14px;
-}
-
-/* ======= CUSTOM BULLET STYLING FOR SKILLS ======= */
-.custom-bullets {
-  list-style: none;
-  padding: 0;
-  text-align: center;                        /* Center the skills */
-}
-
-.custom-bullets li {
-  position: relative;
-  padding-left: 25px;
-  margin-bottom: 10px;
-}
-
-.custom-bullets li::before {
-  content: "✦";                              /* Decorative bullet */
-  position: absolute;
-  left: 0;
-  color: var(--highlight);
-  font-size: 18px;
-}
-
-/* ======= CONTACT PANEL STYLING ======= */
-.contact-panel {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 250px;                               /* Fixed width for panel */
-  height: 100vh;                              /* Full height */
-  background-color: var(--primary);
-  color: #fff;
-  padding: 40px 20px;                         /* Padding around panel */
-  box-shadow: -2px 0 6px rgba(0,0,0,0.2);     /* Shadow on left edge */
-  display: flex;
-  flex-direction: column;                     /* Stack items vertically */
-  justify-content: space-between;            /* Pushes location to bottom */
-  z-index: 1000;
-}
-
-.contact-panel ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: left;
-}
-
-.contact-panel li {
-  margin-bottom: 20px;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.contact-panel i {
-  margin-right: 10px;
-  color: var(--accent);                       /* Icon color */
-}
-
-.contact-panel a {
-  color: var(--accent);                       /* Link color */
-  text-decoration: none;
-}
-
-.contact-panel a:hover {
-  text-decoration: underline;                /* Hover effect */
-}
-
-/* ======= RESPONSIVE FIX FOR SMALL SCREENS ======= */
-@media (max-width: 768px) {
-  .content {
-    margin-right: 0;                          /* Remove extra spacing */
-    padding: 20px;
-  }
-
-  .contact-panel {
-    position: relative;                      /* Makes contact panel inline */
-    width: 100%;
-    height: auto;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .sidebar {
-    flex-direction: column;
-    padding: 10px;
-    gap: 20px;
-  }
-}
-/* ======= SKILLS GRID SECTION ======= */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive grid */
-  gap: 30px;                     /* Space between items */
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 30px 0;
-  text-align: center;
-}
-
-.skill-item {
-  background-color: var(--background); /* Matches site theme */
-  border: 1.5px solid var(--accent);   /* Subtle border */
-  border-radius: 8px;
-  padding: 20px 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text);
-  transition: transform 0.2s ease;
-}
-
-.skill-item i {
-  display: block;
-  font-size: 26px;
-  margin-bottom: 10px;
-  color: var(--highlight); /* Burnt orange icons */
-}
-
-.skill-item:hover {
-  transform: translateY(-5px); /* Subtle lift on hover */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
