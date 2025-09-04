@@ -233,3 +233,37 @@ h2 {
     gap: 20px;
   }
 }
+/* ======= SKILLS GRID SECTION ======= */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive grid */
+  gap: 30px;                     /* Space between items */
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.skill-item {
+  background-color: var(--background); /* Matches site theme */
+  border: 1.5px solid var(--accent);   /* Subtle border */
+  border-radius: 8px;
+  padding: 20px 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  transition: transform 0.2s ease;
+}
+
+.skill-item i {
+  display: block;
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: var(--highlight); /* Burnt orange icons */
+}
+
+.skill-item:hover {
+  transform: translateY(-5px); /* Subtle lift on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
